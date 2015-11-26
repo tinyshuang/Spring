@@ -11,7 +11,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
  * @author Administrator
  * @description  请求的拦截器
  * <!-- 当调用由@RequestMapping 声明的请求时,声明拦截器.. -->
- * <!-- 其下有如下三个方法:postHandle(..),postHandle(..),afterCompletion(..).. -->
+ * <!-- 其下有如下三个方法:preHandle(..),postHandle(..),afterCompletion(..).. -->
     <mvc:interceptors>
     	<bean id="officeHoursInterceptor"  class="hxk.handleMapping.TimeBasedAccessInterceptor">
 	        <property name="openingTime" value="9"/>

@@ -41,7 +41,7 @@ public class AroundAspect {
 	return retVal;
     }
     
-    //传参数到这个切面中来,只能匹配连接点参数只有name的方法,下面上个能匹配多个参数的
+    //传参数到这个切面中来,只能匹配连接点参数只有name的方法,这个能匹配多个参数的
     @Around("execution(* hxk..around.*.multliarg(..)) && args(name,..)")
     public Object multliarg(ProceedingJoinPoint pjp,String name) throws Throwable {
 	System.out.println("multliarg");
